@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Banco Shibasito"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Sección de Validación Inicial -->
+    <EditText
+        android:id="@+id/txtDni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="DNI (ej: 78001234)"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/txtClienteId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID Cliente (ej: CL002)" />
+
+    <Button
+        android:id="@+id/btnValidar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Validar Identidad (en RENIEC)" />
+
+    <!-- Sección de Operaciones (deshabilitada al inicio) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Operaciones"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnScanQR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="2. Escanear QR (Transacción)" />
+
+    <Button
+        android:id="@+id/btnSolicitarPrestamo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="3. Solicitar Préstamo (S/ 5000)" />
+
+    <!-- Consola de Resultados (simula el chat) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chat Banco:"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f0f0f0"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/txtResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Por favor, valide su identidad..." />
+    </ScrollView>
+
+</LinearLayout>

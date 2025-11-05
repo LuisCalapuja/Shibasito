@@ -1,0 +1,14 @@
+{
+  "name": "servicio-reniec",
+  "version": "1.0.0",
+  "description": "Servicio para validación de identidad con MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "setup-db": "node bd_setup.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.4",
+    "mongodb": "^6.5.0"
+  }
+}
